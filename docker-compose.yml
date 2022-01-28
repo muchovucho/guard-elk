@@ -14,6 +14,9 @@ services:
         source: ./elasticsearch/config/elasticsearch.yml
         target: /usr/share/elasticsearch/config/elasticsearch.yml
         read_only: true
+      - type: bind
+        source: ./adguard/work/data
+        target: /adguard/data
       - type: volume
         source: elasticsearch-data
         target: /usr/share/elasticsearch/data
